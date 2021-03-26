@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:19
+// This bundle was auto-generated on 2021-1-5 at 20:17:49
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/CC3220SF
-defineResource("/CC3220SF/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/CC3220SF/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -36,7 +36,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/CC3220SF/templates/driverlib/CC3220SF_LAUNCHXL.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/CC3220SF/templates/driverlib/CC3220SF_LAUNCHXL.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -1381,7 +1381,7 @@ __p += '    }\n};\n\nconst UART_Config UART_config[CC3220SF_LAUNCHXL_UARTCOUNT] 
 __p += '/*\n *  =============================== Watchdog ===============================\n */\n#include <ti/drivers/Watchdog.h>\n#include <ti/drivers/watchdog/WatchdogCC32XX.h>\n\nWatchdogCC32XX_Object watchdogCC3220SObjects[CC3220SF_LAUNCHXL_WATCHDOGCOUNT];\n\nconst WatchdogCC32XX_HWAttrs watchdogCC3220SHWAttrs[CC3220SF_LAUNCHXL_WATCHDOGCOUNT] = {\n    {\n        .baseAddr = WDT_BASE,\n        .intNum = INT_WDT,\n        .intPriority = (~0),\n        .reloadValue = 80000000 // 1 second period at default CPU clock freq\n    }\n};\n\nconst Watchdog_Config Watchdog_config[CC3220SF_LAUNCHXL_WATCHDOGCOUNT] = {\n    {\n        .fxnTablePtr = &WatchdogCC32XX_fxnTable,\n        .object = &watchdogCC3220SObjects[CC3220SF_LAUNCHXL_WATCHDOG0],\n        .hwAttrs = &watchdogCC3220SHWAttrs[CC3220SF_LAUNCHXL_WATCHDOG0]\n    }\n};\n\nconst uint_least8_t Watchdog_count = CC3220SF_LAUNCHXL_WATCHDOGCOUNT;\n\n#if defined(__SF_DEBUG__)\n#if defined(__TI_COMPILER_VERSION__)\n#pragma DATA_SECTION(ulDebugHeader, ".dbghdr")\n#elif defined(__IAR_SYSTEMS_ICC__)\n#pragma data_location=".dbghdr"\n#elif defined(__GNUC__)\n__attribute__ ((section (".dbghdr")))\n#endif\nconst unsigned long ulDebugHeader[]=\n{\n                0x5AA5A55A,\n                0x000FF800,\n                0xEFA3247D\n};\n#endif\n';
 return __p
 }; });
-defineResource("/CC3220SF/templates/driverlib/CC3220SF_LAUNCHXL.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/CC3220SF/templates/driverlib/CC3220SF_LAUNCHXL.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 

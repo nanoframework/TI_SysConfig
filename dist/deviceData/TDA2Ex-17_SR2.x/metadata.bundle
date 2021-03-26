@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:24
+// This bundle was auto-generated on 2021-1-5 at 20:17:53
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/TDA2Ex-17_SR2.x
-defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Generic File Formats/devicetree.txt.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Generic File Formats/devicetree.txt.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -24982,7 +24982,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Generic File Formats/genericFileFormatIOdelay.txt.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Generic File Formats/genericFileFormatIOdelay.txt.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -50358,7 +50358,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Generic File Formats/genericFileFormatPadConf.txt.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Generic File Formats/genericFileFormatPadConf.txt.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -76204,7 +76204,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelay.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelay.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -99953,7 +99953,7 @@ __p += '/**\r\n *  \\brief Flag definition for alternate mux mode used \r\n */\r
 __p += '/**\r\n *  \\brief Function to return the array size as it may differ based on \r\n *         the selections made in boardPadDelayTune.h file.\r\n */\r\n#if defined(_TMS320C6X) || defined(__TI_ARM_V7M4__)\r\n#ifndef __cplusplus\r\n#pragma CODE_SECTION (boardPadGetSize, "BOARD_IO_DELAY_CODE");\r\n#endif\r\nuint32_t boardPadGetSize();\r\n#else\r\nuint32_t boardPadGetSize() __attribute__((section("BOARD_IO_DELAY_CODE")));\r\n#endif\r\n\r\n/**\r\n *  \\brief Function to return the alternate array size as it may differ based on \r\n *         the selections made in boardPadDelayTune.h file.\r\n */\r\n#if defined(BOARD_PAD_DELAY_ALT_GRP_ENABLE)\r\n#if defined(_TMS320C6X) || defined(__TI_ARM_V7M4__)\r\n#ifndef __cplusplus\r\n#pragma CODE_SECTION (boardAltPadGetSize, "BOARD_IO_DELAY_CODE");\r\n#endif\r\nuint32_t boardAltPadGetSize();\r\n#else\r\nuint32_t boardAltPadGetSize() __attribute__((section("BOARD_IO_DELAY_CODE")));\r\n#endif\r\n#endif\r\n\r\n/**\r\n *  \\brief    Function to return the runtime pinmux config table for the MMCSD\r\n *            instance.\r\n */\r\nmmcBoardPadCfgTable_t* BoardGetMmcCtrlPadPinmuxTable(uint32_t instance);\r\n';
 return __p
 }; });
-defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayDevice.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayDevice.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -124356,7 +124356,7 @@ __p += '    { MMC_MODE_INVALID, NULL, 0 }\r\n    /**< Invalid MMC Mode */\r\n};\
 __p += '\r\n/* Look up Table containing the list of all Pad configuration structures for\r\n   different operating modes defined for an instance of the MMC device. */\r\nmmcBoardPadCfgTable_t* gMmcPadConfigTable[] =\r\n{\r\n    gMmc1PinmuxTable,\r\n    /**< Pointer to the Pad configuration structure of MMC1 instance. */\r\n    gMmc2PinmuxTable,\r\n    /**< Pointer to the Pad configuration structure of MMC2 instance. */\r\n    gMmc3PinmuxTable,\r\n    /**< Pointer to the Pad configuration structure of MMC3 instance. */\r\n    gMmc4PinmuxTable\r\n    /**< Pointer to the Pad configuration structure of MMC4 instance. */\r\n};\r\n\r\nmmcBoardPadCfgTable_t* BoardGetMmcCtrlPadPinmuxTable(uint32_t instance)\r\n{\r\n    return (gMmcPadConfigTable[instance]);\r\n}\r\n';
 return __p
 }; });
-defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayInit.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayInit.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -150232,7 +150232,7 @@ __p += '};\n#endif\n';
 __p += '\n#ifdef __cplusplus\n#if defined(_TMS320C6X) || defined(__TI_ARM_V7M4__)\n#pragma CODE_SECTION ("BOARD_IO_DELAY_CODE");\n#endif\n#endif\nuint32_t boardPadGetSize()\n{\n     return (sizeof(pad) / sizeof(boardPadDelayCfg_t));\n}\n\n#ifdef BOARD_PAD_DELAY_ALT_GRP_ENABLE\n#ifdef __cplusplus\n#if defined(_TMS320C6X) || defined(__TI_ARM_V7M4__)\n#pragma CODE_SECTION ("BOARD_IO_DELAY_CODE");\n#endif\n#endif\nuint32_t boardAltPadGetSize()\n{\n     return (sizeof(altPad) / sizeof(boardPadDelayAltGpCfg_t));\n}\n#endif\n';
 return __p
 }; });
-defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayTune.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayTune.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -175363,7 +175363,7 @@ __p += '#ifdef ' +
 
 return __p
 }; });
-defineResource("/TDA2Ex-17_SR2.x/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TDA2Ex-17_SR2.x/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 

@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:27
+// This bundle was auto-generated on 2021-1-5 at 20:17:56
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/legacy
-defineResource("/legacy/adapt.js", function(_, system, pmux, scripting) { "use strict";let exports = {}; "use strict";
+defineResource("/legacy/adapt.js", function(_, system, pmux, scripting, require) { "use strict";let exports = {}; let module = {exports}; {"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports = (system) => {
     const buildSolution = system.getScript("/legacy/buildSolution.js");
@@ -17,8 +17,8 @@ exports = (system) => {
     };
 };
 
-return exports; });
-defineResource("/legacy/buildSolution.js", function(_, system, pmux, scripting) { "use strict";let exports = {}; "use strict";
+} return _.isEqual(exports, {}) ? module.exports : exports; });
+defineResource("/legacy/buildSolution.js", function(_, system, pmux, scripting, require) { "use strict";let exports = {}; let module = {exports}; {"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getConfigurableType(configurable) {
     return configurable.type.toLowerCase();
@@ -41,7 +41,6 @@ function createEmptySolution() {
         selectedUseCases: {},
     };
 }
-exports.createEmptySolution = createEmptySolution;
 const overrideMemberName = "$assign";
 function isGPIOInterfaceInstance(inst) {
     return !(overrideMemberName in inst);
@@ -165,4 +164,4 @@ const buildSolution = (system) => {
 };
 exports = buildSolution;
 
-return exports; });
+} return _.isEqual(exports, {}) ? module.exports : exports; });

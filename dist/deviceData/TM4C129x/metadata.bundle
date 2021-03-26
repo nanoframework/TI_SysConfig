@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:27
+// This bundle was auto-generated on 2021-1-5 at 20:17:56
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/TM4C129x
-defineResource("/TM4C129x/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TM4C129x/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -40,7 +40,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/TM4C129x/templates/driverlib/pinout.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TM4C129x/templates/driverlib/pinout.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -544,7 +544,7 @@ __p += '\n';
 __p += '}\n\n//*****************************************************************************\n//\n// Close the Doxygen group.\n//! @}\n//\n//*****************************************************************************\n\n';
 return __p
 }; });
-defineResource("/TM4C129x/templates/driverlib/pinout.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/TM4C129x/templates/driverlib/pinout.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 

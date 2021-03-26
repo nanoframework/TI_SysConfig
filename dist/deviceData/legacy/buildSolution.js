@@ -21,7 +21,6 @@ function createEmptySolution() {
         selectedUseCases: {},
     };
 }
-exports.createEmptySolution = createEmptySolution;
 const overrideMemberName = "$assign";
 function isGPIOInterfaceInstance(inst) {
     return !(overrideMemberName in inst);

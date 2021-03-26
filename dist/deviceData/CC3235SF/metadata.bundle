@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:19
+// This bundle was auto-generated on 2021-1-5 at 20:17:49
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/CC3235SF
-defineResource("/CC3235SF/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/CC3235SF/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -36,7 +36,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/CC3235SF/templates/driverlib/CC3235SF_LAUNCHXL.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/CC3235SF/templates/driverlib/CC3235SF_LAUNCHXL.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -1382,7 +1382,7 @@ __p += '    }\n};\n\nconst UART_Config UART_config[CC3235SF_LAUNCHXL_UARTCOUNT] 
 __p += '/*\n *  =============================== Watchdog ===============================\n */\n#include <ti/drivers/Watchdog.h>\n#include <ti/drivers/watchdog/WatchdogCC32XX.h>\n\nWatchdogCC32XX_Object watchdogCC3235SFObjects[CC3235SF_LAUNCHXL_WATCHDOGCOUNT];\n\nconst WatchdogCC32XX_HWAttrs watchdogCC3235SFHWAttrs[CC3235SF_LAUNCHXL_WATCHDOGCOUNT] = {\n    {\n        .baseAddr = WDT_BASE,\n        .intNum = INT_WDT,\n        .intPriority = (~0),\n        .reloadValue = 80000000 // 1 second period at default CPU clock freq\n    }\n};\n\nconst Watchdog_Config Watchdog_config[CC3235SF_LAUNCHXL_WATCHDOGCOUNT] = {\n    {\n        .fxnTablePtr = &WatchdogCC32XX_fxnTable,\n        .object = &watchdogCC3235SFObjects[CC3235SF_LAUNCHXL_WATCHDOG0],\n        .hwAttrs = &watchdogCC3235SFHWAttrs[CC3235SF_LAUNCHXL_WATCHDOG0]\n    }\n};\n\nconst uint_least8_t Watchdog_count = CC3235SF_LAUNCHXL_WATCHDOGCOUNT;\n';
 return __p
 }; });
-defineResource("/CC3235SF/templates/driverlib/CC3235SF_LAUNCHXL.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/CC3235SF/templates/driverlib/CC3235SF_LAUNCHXL.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 

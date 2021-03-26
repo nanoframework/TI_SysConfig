@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:19
+// This bundle was auto-generated on 2021-1-5 at 20:17:49
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/AMIC120
-defineResource("/AMIC120/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AMIC120/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -48,7 +48,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/AMIC120/templates/devicetree/devicetree.dtsi.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AMIC120/templates/devicetree/devicetree.dtsi.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -169,7 +169,7 @@ __p += '		>;\n	};\n\n';
 __p += '};\n';
 return __p
 }; });
-defineResource("/AMIC120/templates/starterware/amic120_pinmux.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AMIC120/templates/starterware/amic120_pinmux.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -222,7 +222,7 @@ __p += '	PIN_OFFSET_MAX ' +
 '\n};\n\n\n/* ========================================================================== */\n/*                            Global Variables                                */\n/* ========================================================================== */\n\n/** \\brief Auto-generated pinmux configuration data for the board. */\nextern pinmuxBoardCfg_t gAMIC120PinmuxData[];\n\n#ifdef __cplusplus\n}\n#endif /* __cplusplus */\n#endif /* AMIC120_PIN_MUX_H_ */\n';
 return __p
 }; });
-defineResource("/AMIC120/templates/starterware/amic120_pinmux_data.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AMIC120/templates/starterware/amic120_pinmux_data.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 

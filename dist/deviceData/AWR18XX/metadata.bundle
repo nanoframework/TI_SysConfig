@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:19
+// This bundle was auto-generated on 2021-1-5 at 20:17:49
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/AWR18XX
-defineResource("/AWR18XX/templates/code/pin_mux_config.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AWR18XX/templates/code/pin_mux_config.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -78,7 +78,7 @@ __p += '		Pinmux_Set_FuncSel(SOC_XWR18XX_PIN' +
 __p += '	\n}\n';
 return __p
 }; });
-defineResource("/AWR18XX/templates/code/pin_mux_config.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AWR18XX/templates/code/pin_mux_config.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -96,7 +96,7 @@ __p += '// This file was automatically generated on ' +
 '\n//\n//*****************************************************************************\n\n#ifndef __PIN_MUX_CONFIG_H__\n#define __PIN_MUX_CONFIG_H__\n\nextern void PinMuxConfig(void);\n\n#endif //  __PIN_MUX_CONFIG_H__\n';
 return __p
 }; });
-defineResource("/AWR18XX/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AWR18XX/templates/csv/summary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 

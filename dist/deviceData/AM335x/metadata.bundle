@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:12
+// This bundle was auto-generated on 2021-1-5 at 20:17:42
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/AM335x
-defineResource("/AM335x/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AM335x/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -57,7 +57,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/AM335x/templates/devicetree/devicetree.dtsi.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AM335x/templates/devicetree/devicetree.dtsi.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -194,7 +194,7 @@ __p += '		>;\n	};\n\n';
 __p += '};\n';
 return __p
 }; });
-defineResource("/AM335x/templates/starterware/am335x_pinmux.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AM335x/templates/starterware/am335x_pinmux.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -248,7 +248,7 @@ __p += '	PIN_OFFSET_MAX ' +
 '\n};\n\n\n/* ========================================================================== */\n/*                            Global Variables                                */\n/* ========================================================================== */\n\n/** \\brief Auto-generated pinmux configuration data for the board. */\nextern pinmuxBoardCfg_t gAM335xPinmuxData[];\n\n#ifdef __cplusplus\n}\n#endif /* __cplusplus */\n#endif /* AM335X_PIN_MUX_H_ */\n';
 return __p
 }; });
-defineResource("/AM335x/templates/starterware/am335x_pinmux_data.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/AM335x/templates/starterware/am335x_pinmux_data.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 

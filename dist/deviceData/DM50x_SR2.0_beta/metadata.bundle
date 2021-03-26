@@ -1,7 +1,7 @@
-// This bundle was auto-generated on 2020-5-25 at 12:34:19
+// This bundle was auto-generated on 2021-1-5 at 20:17:49
 // From the folders: 
 // /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/DM50x_SR2.0_beta
-defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Generic File Formats/genericFileFormatPadConf.txt.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Generic File Formats/genericFileFormatPadConf.txt.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -7440,7 +7440,7 @@ __p +=
 
 return __p
 }; });
-defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelay.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelay.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -13079,7 +13079,7 @@ __p += '/**\n *  \\brief Flag definition for alternate mux mode used \n */\n#def
 __p += '/**\n *  \\brief Function to return the array size as it may differ based on \n *         the selections made in boardPadDelayTune.h file.\n */\n#if defined(_TMS320C6X) || defined(__TI_ARM_V7M4__)\n#pragma CODE_SECTION (boardPadGetSize, "BOARD_IO_DELAY_CODE");\nuint32_t boardPadGetSize();\n#else\nuint32_t boardPadGetSize() __attribute__((section("BOARD_IO_DELAY_CODE")));\n#endif\n\n/**\n *  \\brief Function to return the alternate array size as it may differ based on \n *         the selections made in boardPadDelayTune.h file.\n */\n#if defined(BOARD_PAD_DELAY_ALT_GRP_ENABLE)\n#if defined(_TMS320C6X) || defined(__TI_ARM_V7M4__)\n#pragma CODE_SECTION (boardAltPadGetSize, "BOARD_IO_DELAY_CODE");\nuint32_t boardAltPadGetSize();\n#else\nuint32_t boardAltPadGetSize() __attribute__((section("BOARD_IO_DELAY_CODE")));\n#endif\n#endif\n\n/**\n *  \\brief    Function to return the runtime pinmux config table for the MMCSD\n *            instance.\n */\nmmcBoardPadCfgTable_t* BoardGetMmcCtrlPadPinmuxTable(uint32_t instance);\n';
 return __p
 }; });
-defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayDevice.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayDevice.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -19398,7 +19398,7 @@ __p += '    { MMC_MODE_INVALID, NULL, 0 }\n    /**< Invalid MMC Mode */\n};\n';
 __p += '\n/* Look up Table containing the list of all Pad configuration structures for\n   different operating modes defined for an instance of the MMC device. */\nmmcBoardPadCfgTable_t* gMmcPadConfigTable[] =\n{\n    gMmc1PinmuxTable,\n    /**< Pointer to the Pad configuration structure of MMC1 instance. */\n    gMmc2PinmuxTable,\n    /**< Pointer to the Pad configuration structure of MMC2 instance. */\n    gMmc3PinmuxTable,\n    /**< Pointer to the Pad configuration structure of MMC3 instance. */\n    gMmc4PinmuxTable\n    /**< Pointer to the Pad configuration structure of MMC4 instance. */\n};\n\nmmcBoardPadCfgTable_t* BoardGetMmcCtrlPadPinmuxTable(uint32_t instance)\n{\n    return (gMmcPadConfigTable[instance]);\n}\n';
 return __p
 }; });
-defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayInit.c.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayInit.c.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -26921,7 +26921,7 @@ __p += '};\n#endif\n';
 __p += '\nuint32_t boardPadGetSize()\n{\n     return (sizeof(pad) / sizeof(boardPadDelayCfg_t));\n}\n\n#ifdef BOARD_PAD_DELAY_ALT_GRP_ENABLE\nuint32_t boardAltPadGetSize()\n{\n     return (sizeof(altPad) / sizeof(boardPadDelayAltGpCfg_t));\n}\n#endif\n';
 return __p
 }; });
-defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayTune.h.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/DM50x_SR2.0_beta/templates/SR2.0 - Platform Development Kit (PDK)/boardPadDelayTune.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
@@ -33969,7 +33969,7 @@ __p += '#ifdef ' +
 
 return __p
 }; });
-defineResource("/DM50x_SR2.0_beta/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting) { "use strict";return function(args) {
+defineResource("/DM50x_SR2.0_beta/templates/csv/PinmuxConfigSummary.csv.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 
