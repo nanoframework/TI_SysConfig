@@ -1,6 +1,6 @@
-// This bundle was auto-generated on 2021-1-5 at 20:17:49
+// This bundle was auto-generated on 2021-4-8 at 16:39:34
 // From the folders: 
-// /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/AM65xx_SR1.0
+// /home/xgbsesvc/jenkins/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/AM65xx_SR1.0
 defineResource("/AM65xx_SR1.0/templates/Platform Development Kit (PDK)/AM65xx_pinmux.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }

@@ -1,6 +1,6 @@
-// This bundle was auto-generated on 2021-1-5 at 20:17:56
+// This bundle was auto-generated on 2021-4-8 at 16:39:38
 // From the folders: 
-// /home/xgbsesvc/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/legacy
+// /home/xgbsesvc/jenkins/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/legacy
 defineResource("/legacy/adapt.js", function(_, system, pmux, scripting, require) { "use strict";let exports = {}; let module = {exports}; {"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports = (system) => {
@@ -57,14 +57,11 @@ function createConfigValuesObj(configurables, inst) {
     });
     return obj;
 }
+const powerDomainsModuleName = "/ti/corePinmux/powerDomains";
 const buildSolution = (system) => {
     const solution = createEmptySolution();
     const deviceData = system.deviceData;
     const interfaces = system.peripherals;
-    const powerDomainInfo = {
-        enabled: system.powerDomains.areEnabled(),
-        settings: system.powerDomains.getSettings(),
-    };
     _.each(interfaces, (iface) => {
         _.each(iface.$instances, (inst) => {
             if (isInterfaceInstance(inst)) {
@@ -139,8 +136,8 @@ const buildSolution = (system) => {
                 useCase: useCase.description,
                 warning,
             };
-            if (powerDomainInfo.enabled) {
-                assignment.powerSetting = powerDomainInfo.settings[assignment.devicePin.powerDomain.name];
+            if (system.modules[powerDomainsModuleName]) {
+                assignment.powerSetting = system.modules[powerDomainsModuleName].$static[assignment.devicePin.powerDomain.name];
                 assignment.requiredVoltageLevel = voltage;
             }
             if (ioSet) {

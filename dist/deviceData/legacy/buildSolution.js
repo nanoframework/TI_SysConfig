@@ -37,14 +37,11 @@ function createConfigValuesObj(configurables, inst) {
     });
     return obj;
 }
+const powerDomainsModuleName = "/ti/corePinmux/powerDomains";
 const buildSolution = (system) => {
     const solution = createEmptySolution();
     const deviceData = system.deviceData;
     const interfaces = system.peripherals;
-    const powerDomainInfo = {
-        enabled: system.powerDomains.areEnabled(),
-        settings: system.powerDomains.getSettings(),
-    };
     _.each(interfaces, (iface) => {
         _.each(iface.$instances, (inst) => {
             if (isInterfaceInstance(inst)) {
@@ -119,8 +116,8 @@ const buildSolution = (system) => {
                 useCase: useCase.description,
                 warning,
             };
-            if (powerDomainInfo.enabled) {
-                assignment.powerSetting = powerDomainInfo.settings[assignment.devicePin.powerDomain.name];
+            if (system.modules[powerDomainsModuleName]) {
+                assignment.powerSetting = system.modules[powerDomainsModuleName].$static[assignment.devicePin.powerDomain.name];
                 assignment.requiredVoltageLevel = voltage;
             }
             if (ioSet) {
