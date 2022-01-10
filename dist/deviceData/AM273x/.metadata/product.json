@@ -1,13 +1,13 @@
 {
-	"name": "TPR12",
-	"displayName": "TPR12",
+	"name": "AM273x",
+	"displayName": "AM273x",
 	"version": "0.0.1",
 	"documentationPath": "../docs/",
 	"includePaths": [
 		".."
 	],
 	"devices": [
-		"TPR12"
+		"AM273x"
 	],
 	"topModules": [
 		{
@@ -15,6 +15,7 @@
 			"modules": [
 				"/ti/peripherals/DMM",
 				"/ti/peripherals/DSS_UART",
+				"/ti/peripherals/DSS_RTI",
 				"/ti/peripherals/ERROR",
 				"/ti/peripherals/FE1_REFCLK",
 				"/ti/peripherals/FE2_REFCLK",
@@ -33,6 +34,7 @@
 				"/ti/peripherals/MSS_RGMII",
 				"/ti/peripherals/MSS_RMII",
 				"/ti/peripherals/MSS_RS232",
+				"/ti/peripherals/MSS_RTI",
 				"/ti/peripherals/MSS_UART",
 				"/ti/peripherals/MSS_QSPI",
 				"/ti/peripherals/OBS_CLKOUT",
@@ -53,13 +55,13 @@
 	],
 	 "templates": [
 	{
-	"name": "/ti/templates/TPR12_pinmux_data.c.xdt",
-	"outputPath": "TPR12_pinmux_data.c",
+	"name": "/ti/templates/AM273x_pinmux_data.c.xdt",
+	"outputPath": "AM273x_pinmux_data.c",
 	"alwaysRun" : true
 	},
 	{
-		"name": "/ti/templates/TPR12_pinmux.h.xdt",
-		"outputPath": "TPR12_pinmux.h",
+		"name": "/ti/templates/AM273x_pinmux.h.xdt",
+		"outputPath": "AM273x_pinmux.h",
 		"alwaysRun" : true
 	},
 	{

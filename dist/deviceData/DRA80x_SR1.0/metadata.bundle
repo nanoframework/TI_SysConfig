@@ -1,6 +1,3 @@
-// This bundle was auto-generated on 2021-4-8 at 16:39:36
-// From the folders: 
-// /home/xgbsesvc/jenkins/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/DRA80x_SR1.0
 defineResource("/DRA80x_SR1.0/templates/Platform Development Kit (PDK)/DRA80x_pinmux.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }

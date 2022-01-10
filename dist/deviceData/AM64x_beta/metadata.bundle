@@ -1,6 +1,3 @@
-// This bundle was auto-generated on 2021-4-8 at 16:39:34
-// From the folders: 
-// /home/xgbsesvc/jenkins/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/AM64x_beta
 defineResource("/AM64x_beta/templates/Platform Development Kit (PDK)/AM64x_pinmux.h.xdt", function(_, system, pmux, scripting, require) { "use strict";return function(args) {
 var __t, __p = '', __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
@@ -587,7 +584,7 @@ __p += '	' +
 '_pins_default {\r\n		pinctrl-single,pins = <\r\n';
 			_( requirement ).each( function( assignment ) {
 ;
-__p += '			AM64x_IOPAD(' +
+__p += '			AM64X_IOPAD(' +
 ((__t = (getOffset( assignment ))) == null ? '' : __t) +
 ', ' +
 ((__t = (getPinConfig( assignment ))) == null ? '' : __t) +
@@ -617,7 +614,7 @@ __p += '	' +
 '_pins_default {\r\n		pinctrl-single,pins = <\r\n';
 			_( requirement ).each( function( assignment ) {
 ;
-__p += '			AM64x_WKUP_IOPAD(' +
+__p += '			AM64X_WKUP_IOPAD(' +
 ((__t = (getOffset( assignment ))) == null ? '' : __t) +
 ', ' +
 ((__t = (getPinConfig( assignment ))) == null ? '' : __t) +

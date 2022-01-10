@@ -1,6 +1,3 @@
-// This bundle was auto-generated on 2021-4-8 at 16:39:38
-// From the folders: 
-// /home/xgbsesvc/jenkins/jenkins/workspace/sysconfig.build.installers/pinmux/out/dist/deviceData/legacy
 defineResource("/legacy/adapt.js", function(_, system, pmux, scripting, require) { "use strict";let exports = {}; let module = {exports}; {"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports = (system) => {
